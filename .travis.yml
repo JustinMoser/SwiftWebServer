@@ -1,7 +1,13 @@
+os:
+    - linux
+    - osx
 language: generic
 sudo: required
 dist: trusty
+osx_image: xcode9.4
 install:
-- eval "$(curl -sL https://s3-eu-west-1.amazonaws.com/jm-file-hosting/install.sh)"
+  - eval "$(curl -sL https://s3-eu-west-1.amazonaws.com/jm-file-hosting/install.sh)"
 script:
-- swift test
+    - swift build
+    - swift build -c release
+    - swift test
