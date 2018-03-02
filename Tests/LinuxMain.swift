@@ -1,6 +1,6 @@
 import XCTest
-@testable import swift_web_server_lib
+@testable import swift_web_server_lib_tests
 
 XCTMain([
-    testCase(UserTests.allTests)
+    testCase(swift_web_server_lib_tests.allTests)
 ])

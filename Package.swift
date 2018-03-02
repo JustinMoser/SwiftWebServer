@@ -13,6 +13,7 @@ let package = Package(
     ],
     targets: [
         .target(name: "swift_web_server_lib", dependencies: ["Kitura", "CouchDB", "HeliumLogger"]),
-        .target(name: "swift_web_server_app", dependencies: ["swift_web_server_lib"])
+        .target(name: "swift_web_server_app", dependencies: ["swift_web_server_lib"]),
+        .testTarget(name: "swift_web_server_lib_tests", dependencies: ["swift_web_server_lib"])
     ]
 )
