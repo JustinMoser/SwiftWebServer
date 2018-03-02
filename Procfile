@@ -1,1 +1,1 @@
-web: swift_web_server_app --workers 3 --bind 127.0.0.1:8090
+web: swift_web_server_app --workers 5 --bind 0.0.0.0:$PORT

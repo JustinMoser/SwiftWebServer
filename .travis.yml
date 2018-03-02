@@ -1,0 +1,7 @@
+language: generic
+sudo: required
+dist: trusty
+install:
+- eval "$(curl -sL https://s3-eu-west-1.amazonaws.com/jm-file-hosting/install.sh)"
+script:
+- swift test
