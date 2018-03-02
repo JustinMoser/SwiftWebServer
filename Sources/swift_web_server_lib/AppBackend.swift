@@ -1,6 +1,7 @@
 import Kitura
 import HeliumLogger
 import CouchDB
+import Foundation
 
 public class AppBackend {
     public static func run(){
@@ -18,7 +19,7 @@ public class AppBackend {
         let dbInteraction = DatabaseInteraction(db: db)
         let app = MainRouter(db: dbInteraction)
 
-        Kitura.addHTTPServer(onPort: 8090, with: app.router)
+        Kitura.addHTTPServer(onPort: Int(ProcessInfo.processInfo.environment["PORT"]!)!, with: app.router)
         Kitura.run()
     }
 }
