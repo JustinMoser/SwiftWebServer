@@ -1,1 +1,1 @@
-web: swift_web_server_app --workers 5 --bind 0.0.0.0:$PORT
+web: .build/release/swift_web_server_app --workers 5 --bind 0.0.0.0:$PORT

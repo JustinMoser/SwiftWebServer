@@ -8,7 +8,7 @@
             "type": "swift-debug",
             "request": "launch",
             "name": "Swift Program Debugger",
-            "program": "${workspaceRoot}/.build/debug/swift_web_server"
+            "program": "${workspaceRoot}/.build/debug/swift_web_server_app"
         }
     ]
 }
