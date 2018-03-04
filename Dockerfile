@@ -4,5 +4,5 @@ ADD . /app
 WORKDIR /app
 EXPOSE 8090
 USER root
-RUN swift build
+RUN swift build -c release
 CMD [".build/release/swift_web_server_app"]
