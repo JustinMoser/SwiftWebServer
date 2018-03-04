@@ -19,7 +19,7 @@ public class AppBackend {
         let dbInteraction = DatabaseInteraction(db: db)
         let app = MainRouter(db: dbInteraction)
 
-        Kitura.addHTTPServer(onPort: Int(ProcessInfo.processInfo.environment["PORT"]!)!, with: app.router)
+        Kitura.addHTTPServer(onPort: Int(ProcessInfo.processInfo.environment["PORT"] ?? "8090") ?? 8090, with: app.router)
         Kitura.run()
     }
 }
